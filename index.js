@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 import { errorHandler, notFound } from './middlewares/error.js';
-import routes from './routes/index.js';
+import routes from './api/index.js';
 import connectDB from './config/db.js';
 
 
@@ -64,8 +64,8 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+// });
 
 export default app;
